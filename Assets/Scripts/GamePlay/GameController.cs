@@ -1,26 +1,43 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
-    [Header("Scene References")]
+    [Header("Board References")]
     public CellButton[] cells;
-    public TextMeshProUGUI statusText;
+    public RectTransform boardRoot;
+
+    [Header("UI")]
+    public TextMeshProUGUI statusText;          
+    public Image winLineImage;                 
+    public GameObject statusPanel;            
+    public TextMeshProUGUI statusPanelText;    
+
+    [Header("Win Line Animation")]
+    public float strikeDuration = 0.3f;
+
+    [Header("Versus Panel")]
+    public Image rightPlayerImage;
+    public Sprite personSprite;
+    public Sprite computerSprite;
 
     GameState gameState;
     string currentPlayer;
     int[] board = new int[9];
-    public RectTransform winLine;
 
     void Start()
     {
         Debug.Log("Mode: " + GameManager.Instance.currentMode);
+        SetupVersusPanel();
         InitializeGame();
+
     }
 
     void InitializeGame()
     {
-        winLine.gameObject.SetActive(false);
         gameState = GameState.Playing;
         currentPlayer = "X";
         statusText.text = "Player X Turn";
@@ -33,14 +50,38 @@ public class GameController : MonoBehaviour
             cell.SetController(this);
             cell.ResetCell();
         }
+
+        if (winLineImage != null)
+        {
+            winLineImage.gameObject.SetActive(false);
+            winLineImage.fillAmount = 0f;
+        }
+
+        if (statusPanel != null)
+            statusPanel.SetActive(false);
     }
+
+    void SetupVersusPanel()
+    {
+        if (rightPlayerImage == null)
+            return;
+
+        if (GameManager.Instance.currentMode == GameMode.PlayerVsPlayer)
+        {
+            rightPlayerImage.sprite = personSprite;
+        }
+        else
+        {
+            rightPlayerImage.sprite = computerSprite;
+        }
+    }
+
 
     public void OnCellSelected(CellButton cell)
     {
         if (gameState != GameState.Playing)
             return;
 
-        // Prevent clicking during computer turn
         if (GameManager.Instance.currentMode == GameMode.PlayerVsComputer &&
             currentPlayer == "O")
             return;
@@ -52,11 +93,10 @@ public class GameController : MonoBehaviour
 
         SwitchPlayer();
 
-        // 🔹 Computer move
         if (GameManager.Instance.currentMode == GameMode.PlayerVsComputer &&
             currentPlayer == "O")
         {
-            Invoke(nameof(ComputerMove), 0.5f);
+            Invoke(nameof(ComputerMove), 0.4f);
         }
     }
 
@@ -65,49 +105,40 @@ public class GameController : MonoBehaviour
         board[cell.cellIndex] = value;
         cell.SetValue(symbol);
 
-        if (CheckWin(value))
+        int winIndex = CheckWin(value);
+        if (winIndex != -1)
         {
             gameState = value == 1 ? GameState.X_Won : GameState.O_Won;
-            statusText.text = symbol == "X"
-                ? "Player Wins!"
-                : "Computer Wins!";
+
+            string result =
+                value == 1
+                ? "Player 1 Wins!"
+                : (GameManager.Instance.currentMode == GameMode.PlayerVsComputer
+                    ? "Computer Wins!"
+                    : "Player 2 Wins!");
+
+            ShowWinLine(winIndex);
+            ShowStatusPanel(result);
             return;
         }
 
         if (CheckDraw())
         {
             gameState = GameState.Draw;
-            statusText.text = "It's a Draw!";
+            ShowStatusPanel("It's a Draw!");
         }
     }
-    int FindBestMove(int playerValue)
+
+    void SwitchPlayer()
     {
-        int[,] patterns =
-        {
-        {0,1,2},{3,4,5},{6,7,8},
-        {0,3,6},{1,4,7},{2,5,8},
-        {0,4,8},{2,4,6}
-    };
-
-        for (int i = 0; i < 8; i++)
-        {
-            int a = patterns[i, 0];
-            int b = patterns[i, 1];
-            int c = patterns[i, 2];
-
-            int count = 0;
-            int empty = -1;
-
-            if (board[a] == playerValue) count++; else if (board[a] == 0) empty = a;
-            if (board[b] == playerValue) count++; else if (board[b] == 0) empty = b;
-            if (board[c] == playerValue) count++; else if (board[c] == 0) empty = c;
-
-            if (count == 2 && empty != -1)
-                return empty;
-        }
-
-        return -1;
+        currentPlayer = currentPlayer == "X" ? "O" : "X";
+        statusText.text = currentPlayer == "X"
+            ? "Player X Turn"
+            : (GameManager.Instance.currentMode == GameMode.PlayerVsComputer
+                ? "Computer Turn"
+                : "Player O Turn");
     }
+
 
     void ComputerMove()
     {
@@ -116,9 +147,24 @@ public class GameController : MonoBehaviour
 
         int move = FindBestMove(2);
         if (move == -1)
-        {
             move = FindBestMove(1);
+
+        if (move == -1 && board[4] == 0)
+            move = 4;
+
+        if (move == -1)
+        {
+            int[] corners = { 0, 2, 6, 8 };
+            foreach (int c in corners)
+            {
+                if (board[c] == 0)
+                {
+                    move = c;
+                    break;
+                }
+            }
         }
+
         if (move == -1)
         {
             for (int i = 0; i < board.Length; i++)
@@ -140,35 +186,52 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void SwitchPlayer()
+    int FindBestMove(int playerValue)
     {
-        currentPlayer = currentPlayer == "X" ? "O" : "X";
-        statusText.text = currentPlayer == "X"
-            ? "Player X Turn"
-            : (GameManager.Instance.currentMode == GameMode.PlayerVsComputer
-                ? "Computer Turn"
-                : "Player O Turn");
+        int[,] p =
+        {
+            {0,1,2},{3,4,5},{6,7,8},
+            {0,3,6},{1,4,7},{2,5,8},
+            {0,4,8},{2,4,6}
+        };
+
+        for (int i = 0; i < 8; i++)
+        {
+            int a = p[i, 0], b = p[i, 1], c = p[i, 2];
+            int count = 0, empty = -1;
+
+            if (board[a] == playerValue) count++; else if (board[a] == 0) empty = a;
+            if (board[b] == playerValue) count++; else if (board[b] == 0) empty = b;
+            if (board[c] == playerValue) count++; else if (board[c] == 0) empty = c;
+
+            if (count == 2 && empty != -1)
+                return empty;
+        }
+
+        return -1;
     }
+
 
     int CheckWin(int v)
     {
         int[,] p =
         {
-        {0,1,2},{3,4,5},{6,7,8},
-        {0,3,6},{1,4,7},{2,5,8},
-        {0,4,8},{2,4,6}
-    };
+            {0,1,2},{3,4,5},{6,7,8},
+            {0,3,6},{1,4,7},{2,5,8},
+            {0,4,8},{2,4,6}
+        };
 
         for (int i = 0; i < 8; i++)
         {
             if (board[p[i, 0]] == v &&
                 board[p[i, 1]] == v &&
                 board[p[i, 2]] == v)
-                return i; 
+                return i;
         }
 
         return -1;
     }
+
     bool CheckDraw()
     {
         foreach (int c in board)
@@ -176,9 +239,96 @@ public class GameController : MonoBehaviour
                 return false;
         return true;
     }
+
+    void ShowWinLine(int index)
+    {
+        if (winLineImage == null || boardRoot == null)
+            return;
+
+        RectTransform lineRT = winLineImage.rectTransform;
+        winLineImage.gameObject.SetActive(true);
+        winLineImage.fillAmount = 0f;
+
+        lineRT.localPosition = Vector3.zero;
+        lineRT.rotation = Quaternion.identity;
+
+        RectTransform firstCell = cells[0].GetComponent<RectTransform>();
+        float cellSize = firstCell.rect.width;
+        float spacing = boardRoot.GetComponent<GridLayoutGroup>().spacing.x;
+        float offset = cellSize + spacing;
+
+        switch (index)
+        {
+            case 0: lineRT.localPosition = new Vector3(0, offset, 0);
+                lineRT.localScale = new Vector3(1, -1, 1);
+                break;
+            case 1: lineRT.localPosition = Vector3.zero;
+                lineRT.localScale = new Vector3(1, -1, 1);
+                break;
+            case 2: lineRT.localPosition = new Vector3(0, -offset, 0);
+                lineRT.localScale = new Vector3(1, -1, 1);
+                break;
+
+            case 3:
+                lineRT.localPosition = new Vector3(-offset, 0, 0);
+                lineRT.rotation = Quaternion.Euler(0, 0, 90);
+                lineRT.localScale = new Vector3(-1, 1, 1);
+                break;
+            case 4:
+                lineRT.rotation = Quaternion.Euler(0, 0, 90);
+                lineRT.localScale = new Vector3(-1, 1, 1);
+                break;
+            case 5:
+                lineRT.localPosition = new Vector3(offset, 0, 0);
+                lineRT.rotation = Quaternion.Euler(0, 0, 90);
+                lineRT.localScale = new Vector3(-1, 1, 1);
+                break;
+
+            case 6:
+                lineRT.rotation = Quaternion.Euler(0, 0, -45);
+                lineRT.localScale = new Vector3(1, -1, 1);
+                break;
+            case 7:
+                lineRT.rotation = Quaternion.Euler(0, 0, 45);
+                lineRT.localScale = new Vector3(-1, 1, 1);
+                break;
+        }
+
+        StopAllCoroutines();
+        StartCoroutine(AnimateWinLine());
+    }
+
+    IEnumerator AnimateWinLine()
+    {
+        float t = 0f;
+        while (t < strikeDuration)
+        {
+            t += Time.deltaTime;
+            float eased = Mathf.SmoothStep(0f, 1f, t / strikeDuration);
+            winLineImage.fillAmount = eased;
+            yield return null;
+        }
+        winLineImage.fillAmount = 1f;
+    }
+
+
+    void ShowStatusPanel(string message)
+    {
+        if (statusPanel == null)
+            return;
+
+        statusPanel.SetActive(true);
+        statusPanelText.text = message;
+    }
+
+
     public void RestartGame()
     {
         InitializeGame();
     }
 
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
