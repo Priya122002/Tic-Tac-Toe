@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aca1b1857dcef7744a71c0f0974418cd
+guid: 92bb5bcf180f6b04da8a494308f6c585
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3530051560576930014
-    second: back-arrow_0
+      213: -4971298508962322525
+    second: Rectangle 51_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,12 +72,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: back-arrow_0
+      name: Rectangle 51_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 75
-        width: 364
-        height: 362
+        x: 0
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed0500bf0334df030800000000000000
-      internalID: 3530051560576930014
+      spriteID: 3a72fdc5856620bb0800000000000000
+      internalID: -4971298508962322525
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      back-arrow_0: 3530051560576930014
+      Rectangle 51_0: -4971298508962322525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

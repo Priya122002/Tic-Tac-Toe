@@ -24,6 +24,24 @@ public class GameController : MonoBehaviour
     public Sprite personSprite;
     public Sprite computerSprite;
 
+    [Header("Versus Turn Animation")]
+    public RectTransform player1Image;
+    public RectTransform player2Image;
+
+    public float pulseScale = 1.2f;
+    public float pulseSpeed = 0.5f;
+
+    Coroutine pulseRoutine;
+
+    [Header("Status Panel Animation")]
+    public float panelAnimDuration = 0.25f;
+    public float panelOvershoot = 1.05f;
+
+    CanvasGroup statusCanvasGroup;
+
+    Coroutine winLineRoutine;
+    Coroutine statusPanelRoutine;
+
     GameState gameState;
     string currentPlayer;
     int[] board = new int[9];
@@ -40,7 +58,7 @@ public class GameController : MonoBehaviour
     {
         gameState = GameState.Playing;
         currentPlayer = "X";
-        statusText.text = "Player X Turn";
+        StartPulse(player1Image);
 
         for (int i = 0; i < board.Length; i++)
             board[i] = 0;
@@ -58,7 +76,15 @@ public class GameController : MonoBehaviour
         }
 
         if (statusPanel != null)
+        {
+            statusCanvasGroup = statusPanel.GetComponent<CanvasGroup>();
+            if (statusCanvasGroup == null)
+                statusCanvasGroup = statusPanel.AddComponent<CanvasGroup>();
+
+            statusCanvasGroup.alpha = 0f;
+            statusPanel.transform.localScale = Vector3.one * 0.8f;
             statusPanel.SetActive(false);
+        }
     }
 
     void SetupVersusPanel()
@@ -102,6 +128,7 @@ public class GameController : MonoBehaviour
 
     void PlayMove(CellButton cell, int value, string symbol)
     {
+        StopPulse();
         board[cell.cellIndex] = value;
         cell.SetValue(symbol);
 
@@ -132,11 +159,11 @@ public class GameController : MonoBehaviour
     void SwitchPlayer()
     {
         currentPlayer = currentPlayer == "X" ? "O" : "X";
-        statusText.text = currentPlayer == "X"
-            ? "Player X Turn"
-            : (GameManager.Instance.currentMode == GameMode.PlayerVsComputer
-                ? "Computer Turn"
-                : "Player O Turn");
+
+        if (currentPlayer == "X")
+            StartPulse(player1Image);
+        else
+            StartPulse(player2Image);
     }
 
 
@@ -239,6 +266,51 @@ public class GameController : MonoBehaviour
                 return false;
         return true;
     }
+    void StartPulse(RectTransform target)
+    {
+        StopPulse();
+
+        pulseRoutine = StartCoroutine(PulseImage(target));
+    }
+
+    void StopPulse()
+    {
+        if (pulseRoutine != null)
+        {
+            StopCoroutine(pulseRoutine);
+            pulseRoutine = null;
+        }
+
+        player1Image.localScale = Vector3.one;
+        player2Image.localScale = Vector3.one;
+    }
+
+    IEnumerator PulseImage(RectTransform target)
+    {
+        Vector3 baseScale = Vector3.one;
+        Vector3 maxScale = Vector3.one * pulseScale;
+
+        while (true)
+        {
+            // Scale up
+            float t = 0f;
+            while (t < 1f)
+            {
+                t += Time.deltaTime * pulseSpeed;
+                target.localScale = Vector3.Lerp(baseScale, maxScale, t);
+                yield return null;
+            }
+
+            // Scale down
+            t = 0f;
+            while (t < 1f)
+            {
+                t += Time.deltaTime * pulseSpeed;
+                target.localScale = Vector3.Lerp(maxScale, baseScale, t);
+                yield return null;
+            }
+        }
+    }
 
     void ShowWinLine(int index)
     {
@@ -293,9 +365,11 @@ public class GameController : MonoBehaviour
                 lineRT.localScale = new Vector3(-1, 1, 1);
                 break;
         }
+        if (winLineRoutine != null)
+            StopCoroutine(winLineRoutine);
 
-        StopAllCoroutines();
-        StartCoroutine(AnimateWinLine());
+        winLineRoutine = StartCoroutine(AnimateWinLine());
+
     }
 
     IEnumerator AnimateWinLine()
@@ -311,14 +385,55 @@ public class GameController : MonoBehaviour
         winLineImage.fillAmount = 1f;
     }
 
-
     void ShowStatusPanel(string message)
     {
+        StopPulse();
+
         if (statusPanel == null)
             return;
 
         statusPanel.SetActive(true);
         statusPanelText.text = message;
+
+        if (statusPanelRoutine != null)
+            StopCoroutine(statusPanelRoutine);
+
+        statusPanelRoutine = StartCoroutine(StatusPanelPopup());
+    }
+
+    IEnumerator StatusPanelPopup()
+    {
+        RectTransform rt = statusPanel.transform as RectTransform;
+
+        float t = 0f;
+        Vector3 startScale = Vector3.one * 0.8f;
+        Vector3 overshootScale = Vector3.one * panelOvershoot;
+        Vector3 endScale = Vector3.one;
+
+        // Fade + scale up
+        while (t < 1f)
+        {
+            t += Time.deltaTime / panelAnimDuration;
+            float eased = Mathf.SmoothStep(0f, 1f, t);
+
+            rt.localScale = Vector3.Lerp(startScale, overshootScale, eased);
+            statusCanvasGroup.alpha = eased;
+
+            yield return null;
+        }
+
+        t = 0f;
+
+        // Settle back to 1
+        while (t < 1f)
+        {
+            t += Time.deltaTime / (panelAnimDuration * 0.6f);
+            rt.localScale = Vector3.Lerp(overshootScale, endScale, t);
+            yield return null;
+        }
+
+        rt.localScale = Vector3.one;
+        statusCanvasGroup.alpha = 1f;
     }
 
 
