@@ -23,6 +23,21 @@ public class GameController : MonoBehaviour
     public Image rightPlayerImage;
     public Sprite personSprite;
     public Sprite computerSprite;
+    [Header("Turn Card Sprites")]
+    public Image playerXCard;
+    public Image playerOCard;
+
+    public Sprite defaultCardSprite;  
+    public Sprite activeXSprite;      
+    public Sprite activeOSprite;      
+
+    [Header("Turn Text")]
+    public TextMeshProUGUI playerXTurnText;
+    public TextMeshProUGUI playerOTurnText;
+
+    public Color activeTextColor = Color.white;
+    public Color inactiveTextColor = new Color(1f, 1f, 1f, 0.5f);
+
 
     [Header("Versus Turn Animation")]
     public RectTransform player1Image;
@@ -32,6 +47,9 @@ public class GameController : MonoBehaviour
     public float pulseSpeed = 0.5f;
 
     Coroutine pulseRoutine;
+    [Header("Player Name Texts")]
+    public TextMeshProUGUI playerXNameText;
+    public TextMeshProUGUI playerONameText;
 
     [Header("Status Panel Animation")]
     public float panelAnimDuration = 0.25f;
@@ -58,6 +76,7 @@ public class GameController : MonoBehaviour
     {
         gameState = GameState.Playing;
         currentPlayer = "X";
+        UpdateTurnUI();
         StartPulse(player1Image);
 
         for (int i = 0; i < board.Length; i++)
@@ -95,12 +114,15 @@ public class GameController : MonoBehaviour
         if (GameManager.Instance.currentMode == GameMode.PlayerVsPlayer)
         {
             rightPlayerImage.sprite = personSprite;
+            playerONameText.text = "Player O";
         }
-        else
+        else 
         {
             rightPlayerImage.sprite = computerSprite;
+            playerONameText.text = "Computer";
         }
     }
+
 
 
     public void OnCellSelected(CellButton cell)
@@ -159,11 +181,13 @@ public class GameController : MonoBehaviour
     void SwitchPlayer()
     {
         currentPlayer = currentPlayer == "X" ? "O" : "X";
+        UpdateTurnUI();
 
         if (currentPlayer == "X")
             StartPulse(player1Image);
         else
             StartPulse(player2Image);
+
     }
 
 
@@ -209,7 +233,9 @@ public class GameController : MonoBehaviour
         if (gameState == GameState.Playing)
         {
             currentPlayer = "X";
-            statusText.text = "Player X Turn";
+            UpdateTurnUI();
+            StartPulse(player1Image);
+
         }
     }
 
@@ -287,8 +313,8 @@ public class GameController : MonoBehaviour
 
     IEnumerator PulseImage(RectTransform target)
     {
-        Vector3 baseScale = Vector3.one;
-        Vector3 maxScale = Vector3.one * pulseScale;
+        Vector3 baseScale = Vector3.one * 0.8f;
+        Vector3 maxScale = Vector3.one;
 
         while (true)
         {
@@ -311,6 +337,17 @@ public class GameController : MonoBehaviour
             }
         }
     }
+    void UpdateTurnUI()
+    {
+        bool isXTurn = currentPlayer == "X";
+
+        playerXCard.sprite = isXTurn ? activeXSprite : defaultCardSprite;
+        playerOCard.sprite = isXTurn ? defaultCardSprite : activeOSprite;
+
+        playerXTurnText.color = isXTurn ? activeTextColor : inactiveTextColor;
+        playerOTurnText.color = isXTurn ? inactiveTextColor : activeTextColor;
+    }
+
 
     void ShowWinLine(int index)
     {
@@ -388,7 +425,7 @@ public class GameController : MonoBehaviour
     void ShowStatusPanel(string message)
     {
         StopPulse();
-
+        SoundManager.Instance.Play("notification");
         if (statusPanel == null)
             return;
 
@@ -439,11 +476,13 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
+        SoundManager.Instance.Play("tap");
         InitializeGame();
     }
 
     public void GoToMenu()
     {
+        SoundManager.Instance.Play("tap");
         SceneManager.LoadScene("Menu");
     }
 }

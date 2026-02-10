@@ -15,6 +15,7 @@ public class MenuController : MonoBehaviour
 
     void StartGame(GameMode mode)
     {
+        SoundManager.Instance.Play("tap");
         GameManager.Instance.currentMode = mode;
         SceneManager.LoadScene("Game");
     }

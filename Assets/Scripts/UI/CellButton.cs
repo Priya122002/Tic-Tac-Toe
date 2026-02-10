@@ -69,7 +69,7 @@ public class CellButton : MonoBehaviour
     {
         label.text = value;
         button.interactable = false;
-
+        SoundManager.Instance.Play("click");
         StopAllCoroutines();
         StartCoroutine(PopAnimation());
     }

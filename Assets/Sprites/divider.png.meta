@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: cea4e28159ac0234d8ad98847781f506
+guid: 651d8a5746f49624198a18b6e2ad9379
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1376207749178728958
-    second: f7_person-2-fill_0
-  - first:
-      213: -6524587128363336260
-    second: f7_person-2-fill_1
-  - first:
-      213: -5294851406833606338
-    second: f7_person-2-fill_2
-  - first:
-      213: -388580788530842096
-    second: f7_person-2-fill_3
+      213: -2056126039432432040
+    second: Group 18_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: f7_person-2-fill_0
+      name: Group 18_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 53
-        width: 35
-        height: 39
+        x: 13
+        y: 0
+        width: 2417
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef120fa08a5491310800000000000000
-      internalID: 1376207749178728958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f7_person-2-fill_1
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 53
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbd31d353920475a0800000000000000
-      internalID: -6524587128363336260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f7_person-2-fill_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 15
-        width: 71
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e31a435e2b8e486b0800000000000000
-      internalID: -5294851406833606338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: f7_person-2-fill_3
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 15
-        width: 50
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 016f315e4db7b9af0800000000000000
-      internalID: -388580788530842096
+      spriteID: 856f23ec24c2773e0800000000000000
+      internalID: -2056126039432432040
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      f7_person-2-fill_0: 1376207749178728958
-      f7_person-2-fill_1: -6524587128363336260
-      f7_person-2-fill_2: -5294851406833606338
-      f7_person-2-fill_3: -388580788530842096
+      Group 18_0: -2056126039432432040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
