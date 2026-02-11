@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ab3649a1c6fdd4d4d9f9bde40d83187b
+guid: 77c1000e396de00438d0b2fba443cd3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8378750879196077826
-    second: Rectangle 50_0
+      213: -6529594694587300005
+    second: button_grey_0
+  - first:
+      213: 1166285543841296489
+    second: button_grey_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rectangle 50_0
+      name: button_grey_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 200
+        width: 932
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20f59f7388d474470800000000000000
-      internalID: 8378750879196077826
+      spriteID: b5749d578383265a0800000000000000
+      internalID: -6529594694587300005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_grey_1
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 154
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960755bd58a7f2010800000000000000
+      internalID: 1166285543841296489
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rectangle 50_0: 8378750879196077826
+      button_grey_0: -6529594694587300005
+      button_grey_1: 1166285543841296489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

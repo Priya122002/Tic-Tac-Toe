@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 217732610}
   - component: {fileID: 217732609}
   m_Layer: 5
-  m_Name: Player vs Computer
+  m_Name: Player vs AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 483913495}
   - component: {fileID: 483913494}
   m_Layer: 5
-  m_Name: Player vs Computer
+  m_Name: Player vs AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Player vs Computer
+  m_text: 'Player vs AI
 
 '
   m_isRightToLeft: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.85
+  m_fontSize: 60
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Challenge the computer
+  m_text: 'Challenge the AI
 
 '
   m_isRightToLeft: 0

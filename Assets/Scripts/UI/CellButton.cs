@@ -12,6 +12,9 @@ public class CellButton : MonoBehaviour
     GameController controller;
     public float popScale = 1.2f;
     public float popSpeed = 12f;
+    [Header("Symbol Colors")]
+    public Color xColor = new Color(0.2f, 0.5f, 1f);  
+    public Color oColor = new Color(0.6f, 0.3f, 1f);  
 
     void Awake()
     {
@@ -68,15 +71,23 @@ public class CellButton : MonoBehaviour
     public void SetValue(string value)
     {
         label.text = value;
+
+        if (value == "X")
+            label.color = xColor;
+        else if (value == "O")
+            label.color = oColor;
+
         button.interactable = false;
+
         SoundManager.Instance.Play("click");
+
         StopAllCoroutines();
         StartCoroutine(PopAnimation());
     }
-
     public void ResetCell()
     {
         label.text = "";
+        label.color = Color.white;
         label.rectTransform.localScale = Vector3.one;
         button.interactable = true;
     }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 92bb5bcf180f6b04da8a494308f6c585
+guid: 079ffe72ac3d3a34982ad16f4ebd53c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4971298508962322525
-    second: Rectangle 51_0
+      213: -3919437246778686195
+    second: Rectangle 65 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rectangle 51_0
+      name: Rectangle 65 (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 200
+        width: 596
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a72fdc5856620bb0800000000000000
-      internalID: -4971298508962322525
+      spriteID: d054252179c5b99c0800000000000000
+      internalID: -3919437246778686195
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rectangle 51_0: -4971298508962322525
+      Rectangle 65 (1)_0: -3919437246778686195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

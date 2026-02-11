@@ -13,16 +13,19 @@ public class GameController : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI statusText;          
     public Image winLineImage;                 
-    public GameObject statusPanel;            
-    public TextMeshProUGUI statusPanelText;    
+    public GameObject statusPanel;
+    [Header("Status Panel Texts")]
+    public TextMeshProUGUI statusTitleText;
+    public TextMeshProUGUI statusCommentText;
+
 
     [Header("Win Line Animation")]
-    public float strikeDuration = 0.3f;
+    public float strikeDuration = 1.2f;
 
     [Header("Versus Panel")]
     public Image rightPlayerImage;
     public Sprite personSprite;
-    public Sprite computerSprite;
+    public Sprite AISprite;
     [Header("Turn Card Sprites")]
     public Image playerXCard;
     public Image playerOCard;
@@ -118,8 +121,8 @@ public class GameController : MonoBehaviour
         }
         else 
         {
-            rightPlayerImage.sprite = computerSprite;
-            playerONameText.text = "Computer";
+            rightPlayerImage.sprite = AISprite;
+            playerONameText.text = "AI";
         }
     }
 
@@ -144,8 +147,14 @@ public class GameController : MonoBehaviour
         if (GameManager.Instance.currentMode == GameMode.PlayerVsComputer &&
             currentPlayer == "O")
         {
-            Invoke(nameof(ComputerMove), 0.4f);
+            StartCoroutine(AIThinkAndMove());
         }
+    }
+    IEnumerator AIThinkAndMove()
+    {
+        float delay = Random.Range(0.7f, 1.2f);
+        yield return new WaitForSeconds(delay);
+        AIMove();
     }
 
     void PlayMove(CellButton cell, int value, string symbol)
@@ -163,19 +172,26 @@ public class GameController : MonoBehaviour
                 value == 1
                 ? "Player 1 Wins!"
                 : (GameManager.Instance.currentMode == GameMode.PlayerVsComputer
-                    ? "Computer Wins!"
+                    ? "AI Wins!"
                     : "Player 2 Wins!");
 
             ShowWinLine(winIndex);
-            ShowStatusPanel(result);
+            StartCoroutine(ShowResultAfterDelay(gameState));
+
+
             return;
         }
 
         if (CheckDraw())
         {
             gameState = GameState.Draw;
-            ShowStatusPanel("It's a Draw!");
+            ShowStatusPanel(GameState.Draw);
         }
+    }
+    IEnumerator ShowResultAfterDelay(GameState state)
+    {
+        yield return new WaitForSeconds(strikeDuration);
+        ShowStatusPanel(state);
     }
 
     void SwitchPlayer()
@@ -191,7 +207,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    void ComputerMove()
+    void AIMove()
     {
         if (gameState != GameState.Playing)
             return;
@@ -318,7 +334,6 @@ public class GameController : MonoBehaviour
 
         while (true)
         {
-            // Scale up
             float t = 0f;
             while (t < 1f)
             {
@@ -327,7 +342,6 @@ public class GameController : MonoBehaviour
                 yield return null;
             }
 
-            // Scale down
             t = 0f;
             while (t < 1f)
             {
@@ -422,15 +436,41 @@ public class GameController : MonoBehaviour
         winLineImage.fillAmount = 1f;
     }
 
-    void ShowStatusPanel(string message)
+    void ShowStatusPanel(GameState state)
     {
         StopPulse();
         SoundManager.Instance.Play("notification");
+
         if (statusPanel == null)
             return;
 
         statusPanel.SetActive(true);
-        statusPanelText.text = message;
+
+        switch (state)
+        {
+            case GameState.X_Won:
+                statusTitleText.text = "PLAYER X WINS!";
+                statusCommentText.text = "Congratulations! Player X is the winner.";
+                break;
+
+            case GameState.O_Won:
+                if (GameManager.Instance.currentMode == GameMode.PlayerVsComputer)
+                {
+                    statusTitleText.text = "AI WINS!";
+                    statusCommentText.text = "Better luck next time!";
+                }
+                else
+                {
+                    statusTitleText.text = "PLAYER O WINS!";
+                    statusCommentText.text = "Congratulations! Player O is the winner.";
+                }
+                break;
+
+            case GameState.Draw:
+                statusTitleText.text = "DRAW!";
+                statusCommentText.text = "It's a tie! No winner this time.";
+                break;
+        }
 
         if (statusPanelRoutine != null)
             StopCoroutine(statusPanelRoutine);
@@ -447,7 +487,6 @@ public class GameController : MonoBehaviour
         Vector3 overshootScale = Vector3.one * panelOvershoot;
         Vector3 endScale = Vector3.one;
 
-        // Fade + scale up
         while (t < 1f)
         {
             t += Time.deltaTime / panelAnimDuration;
@@ -461,7 +500,6 @@ public class GameController : MonoBehaviour
 
         t = 0f;
 
-        // Settle back to 1
         while (t < 1f)
         {
             t += Time.deltaTime / (panelAnimDuration * 0.6f);
@@ -476,13 +514,13 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        SoundManager.Instance.Play("tap");
         InitializeGame();
+        SoundManager.Instance.Play("tap");
     }
 
     public void GoToMenu()
     {
-        SoundManager.Instance.Play("tap");
         SceneManager.LoadScene("Menu");
+        SoundManager.Instance.Play("tap");
     }
 }

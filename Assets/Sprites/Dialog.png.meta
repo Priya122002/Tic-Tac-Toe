@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 72a76dcc9d7991748824022af36602cf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6003351534131484317
+    second: Rectangle 64 (2)_0
+  - first:
+      213: 5683080132348361614
+    second: Rectangle 64 (2)_1
+  - first:
+      213: 6789985485955566013
+    second: Rectangle 64 (2)_2
+  - first:
+      213: 3879918087913105570
+    second: Rectangle 64 (2)_3
+  - first:
+      213: -5203009169059699530
+    second: Rectangle 64 (2)_4
+  - first:
+      213: 4208221352518783574
+    second: Rectangle 64 (2)_5
+  - first:
+      213: 1914968333129451575
+    second: Rectangle 64 (2)_6
+  - first:
+      213: -6775467424392955112
+    second: Rectangle 64 (2)_7
+  - first:
+      213: 4574421108099257799
+    second: Rectangle 64 (2)_8
+  - first:
+      213: -5199681648089175079
+    second: Rectangle 64 (2)_9
+  - first:
+      213: 6568781245737383916
+    second: Rectangle 64 (2)_10
+  - first:
+      213: 2814402387990906068
+    second: Rectangle 64 (2)_11
+  - first:
+      213: 8967281191185957474
+    second: Rectangle 64 (2)_12
+  - first:
+      213: -7257864060592524382
+    second: Rectangle 64 (2)_13
+  - first:
+      213: -27371353346219352
+    second: Rectangle 64 (2)_14
+  - first:
+      213: 5340261613521787223
+    second: Rectangle 64 (2)_15
+  - first:
+      213: -8670322851692466553
+    second: Rectangle 64 (2)_16
+  - first:
+      213: -2268456680348784914
+    second: Rectangle 64 (2)_17
+  - first:
+      213: -2625813866860523605
+    second: Rectangle 64 (2)_18
+  - first:
+      213: -417426022155320611
+    second: Rectangle 64 (2)_19
+  - first:
+      213: -8120317104134938590
+    second: Rectangle 64 (2)_20
+  - first:
+      213: 3227006652837842934
+    second: Rectangle 64 (2)_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1952
+        height: 1320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9614b5c960305350800000000000000
+      internalID: 6003351534131484317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1169
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b34b6254b5ede40800000000000000
+      internalID: 5683080132348361614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1156
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9807813dfda3e50800000000000000
+      internalID: 6789985485955566013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 1150
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a86cabb1fc38d530800000000000000
+      internalID: 3879918087913105570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 985
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4a81b3ab23bc7b0800000000000000
+      internalID: -5203009169059699530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 965
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6529815260b966a30800000000000000
+      internalID: 4208221352518783574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 900
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7388d449d85539a10800000000000000
+      internalID: 1914968333129451575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 894
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bb3d58644b8f1a0800000000000000
+      internalID: -6775467424392955112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 729
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c51e41f2cb9b7f30800000000000000
+      internalID: 4574421108099257799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 709
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbe684171507d7b0800000000000000
+      internalID: -5199681648089175079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 644
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7bc677dbff82b50800000000000000
+      internalID: 6568781245737383916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 638
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4853f7f04ce0720800000000000000
+      internalID: 2814402387990906068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 473
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2624ea19bbe227c70800000000000000
+      internalID: 8967281191185957474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 453
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3fe483713e64b90800000000000000
+      internalID: -7257864060592524382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 388
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2e6ce26e1ce9ff0800000000000000
+      internalID: -27371353346219352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 382
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759de91c4ab6c1a40800000000000000
+      internalID: 5340261613521787223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 217
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e2be0cd43dca780800000000000000
+      internalID: -8670322851692466553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 145
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6e2730ba2d480e0800000000000000
+      internalID: -2268456680348784914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 132
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafcb73433c3f8bd0800000000000000
+      internalID: -2625813866860523605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_19
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd28d659e31053af0800000000000000
+      internalID: -417426022155320611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_20
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2202288fd96de4f80800000000000000
+      internalID: -8120317104134938590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rectangle 64 (2)_21
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffc83e0471a8cc20800000000000000
+      internalID: 3227006652837842934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rectangle 64 (2)_0: 6003351534131484317
+      Rectangle 64 (2)_1: 5683080132348361614
+      Rectangle 64 (2)_10: 6568781245737383916
+      Rectangle 64 (2)_11: 2814402387990906068
+      Rectangle 64 (2)_12: 8967281191185957474
+      Rectangle 64 (2)_13: -7257864060592524382
+      Rectangle 64 (2)_14: -27371353346219352
+      Rectangle 64 (2)_15: 5340261613521787223
+      Rectangle 64 (2)_16: -8670322851692466553
+      Rectangle 64 (2)_17: -2268456680348784914
+      Rectangle 64 (2)_18: -2625813866860523605
+      Rectangle 64 (2)_19: -417426022155320611
+      Rectangle 64 (2)_2: 6789985485955566013
+      Rectangle 64 (2)_20: -8120317104134938590
+      Rectangle 64 (2)_21: 3227006652837842934
+      Rectangle 64 (2)_3: 3879918087913105570
+      Rectangle 64 (2)_4: -5203009169059699530
+      Rectangle 64 (2)_5: 4208221352518783574
+      Rectangle 64 (2)_6: 1914968333129451575
+      Rectangle 64 (2)_7: -6775467424392955112
+      Rectangle 64 (2)_8: 4574421108099257799
+      Rectangle 64 (2)_9: -5199681648089175079
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
