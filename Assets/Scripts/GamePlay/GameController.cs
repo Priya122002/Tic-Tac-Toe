@@ -1,8 +1,15 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
+using UnityEngine.UI;
+public enum AIDifficulty
+{
+    Easy,
+    Medium,
+    Hard
+}
 
 public class GameController : MonoBehaviour
 {
@@ -57,6 +64,10 @@ public class GameController : MonoBehaviour
     [Header("Status Panel Animation")]
     public float panelAnimDuration = 0.25f;
     public float panelOvershoot = 1.05f;
+
+    [Header("AI Difficulty")]
+    public AIDifficulty aiDifficulty = AIDifficulty.Medium;
+
 
     CanvasGroup statusCanvasGroup;
 
@@ -212,7 +223,59 @@ public class GameController : MonoBehaviour
         if (gameState != GameState.Playing)
             return;
 
+        int move = -1;
+
+        switch (aiDifficulty)
+        {
+            case AIDifficulty.Easy:
+                move = GetRandomMove();
+                break;
+
+            case AIDifficulty.Medium:
+                move = MediumMove();
+                break;
+
+            case AIDifficulty.Hard:
+                move = HardMove();
+                break;
+        }
+
+        PlayMove(cells[move], 2, "O");
+
+        if (gameState == GameState.Playing)
+        {
+            currentPlayer = "X";
+            UpdateTurnUI();
+            StartPulse(player1Image);
+        }
+    }
+
+    int GetRandomMove()
+    {
+        List<int> empty = new List<int>();
+
+        for (int i = 0; i < board.Length; i++)
+            if (board[i] == 0)
+                empty.Add(i);
+
+        return empty[Random.Range(0, empty.Count)];
+    }
+    int MediumMove()
+    {
         int move = FindBestMove(2);
+
+        if (move == -1)
+            move = FindBestMove(1); 
+
+        if (move == -1)
+            move = GetRandomMove();
+
+        return move;
+    }
+    int HardMove()
+    {
+        int move = FindBestMove(2);
+
         if (move == -1)
             move = FindBestMove(1);
 
@@ -233,27 +296,11 @@ public class GameController : MonoBehaviour
         }
 
         if (move == -1)
-        {
-            for (int i = 0; i < board.Length; i++)
-            {
-                if (board[i] == 0)
-                {
-                    move = i;
-                    break;
-                }
-            }
-        }
+            move = GetRandomMove();
 
-        PlayMove(cells[move], 2, "O");
-
-        if (gameState == GameState.Playing)
-        {
-            currentPlayer = "X";
-            UpdateTurnUI();
-            StartPulse(player1Image);
-
-        }
+        return move;
     }
+
 
     int FindBestMove(int playerValue)
     {

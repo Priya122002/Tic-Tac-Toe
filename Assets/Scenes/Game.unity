@@ -454,6 +454,7 @@ MonoBehaviour:
   playerONameText: {fileID: 1891784806}
   panelAnimDuration: 0.25
   panelOvershoot: 1.05
+  aiDifficulty: 0
 --- !u!4 &96176761
 Transform:
   m_ObjectHideFlags: 0
