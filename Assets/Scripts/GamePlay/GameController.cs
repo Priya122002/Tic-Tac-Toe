@@ -4,12 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public enum AIDifficulty
-{
-    Easy,
-    Medium,
-    Hard
-}
 
 public class GameController : MonoBehaviour
 {
@@ -18,13 +12,13 @@ public class GameController : MonoBehaviour
     public RectTransform boardRoot;
 
     [Header("UI")]
-    public TextMeshProUGUI statusText;          
-    public Image winLineImage;                 
+    public TextMeshProUGUI statusText;
+    public Image winLineImage;
     public GameObject statusPanel;
+
     [Header("Status Panel Texts")]
     public TextMeshProUGUI statusTitleText;
     public TextMeshProUGUI statusCommentText;
-
 
     [Header("Win Line Animation")]
     public float strikeDuration = 1.2f;
@@ -33,30 +27,28 @@ public class GameController : MonoBehaviour
     public Image rightPlayerImage;
     public Sprite personSprite;
     public Sprite AISprite;
+
     [Header("Turn Card Sprites")]
     public Image playerXCard;
     public Image playerOCard;
-
-    public Sprite defaultCardSprite;  
-    public Sprite activeXSprite;      
-    public Sprite activeOSprite;      
+    public Sprite defaultCardSprite;
+    public Sprite activeXSprite;
+    public Sprite activeOSprite;
 
     [Header("Turn Text")]
     public TextMeshProUGUI playerXTurnText;
     public TextMeshProUGUI playerOTurnText;
-
     public Color activeTextColor = Color.white;
     public Color inactiveTextColor = new Color(1f, 1f, 1f, 0.5f);
-
 
     [Header("Versus Turn Animation")]
     public RectTransform player1Image;
     public RectTransform player2Image;
-
     public float pulseScale = 1.2f;
     public float pulseSpeed = 0.5f;
 
     Coroutine pulseRoutine;
+
     [Header("Player Name Texts")]
     public TextMeshProUGUI playerXNameText;
     public TextMeshProUGUI playerONameText;
@@ -64,10 +56,6 @@ public class GameController : MonoBehaviour
     [Header("Status Panel Animation")]
     public float panelAnimDuration = 0.25f;
     public float panelOvershoot = 1.05f;
-
-    [Header("AI Difficulty")]
-    public AIDifficulty aiDifficulty = AIDifficulty.Medium;
-
 
     CanvasGroup statusCanvasGroup;
 
@@ -85,6 +73,7 @@ public class GameController : MonoBehaviour
         InitializeGame();
 
     }
+
 
     void InitializeGame()
     {
@@ -130,15 +119,12 @@ public class GameController : MonoBehaviour
             rightPlayerImage.sprite = personSprite;
             playerONameText.text = "Player O";
         }
-        else 
+        else
         {
             rightPlayerImage.sprite = AISprite;
             playerONameText.text = "AI";
         }
     }
-
-
-
     public void OnCellSelected(CellButton cell)
     {
         if (gameState != GameState.Playing)
@@ -161,6 +147,7 @@ public class GameController : MonoBehaviour
             StartCoroutine(AIThinkAndMove());
         }
     }
+
     IEnumerator AIThinkAndMove()
     {
         float delay = Random.Range(0.7f, 1.2f);
@@ -175,21 +162,13 @@ public class GameController : MonoBehaviour
         cell.SetValue(symbol);
 
         int winIndex = CheckWin(value);
+
         if (winIndex != -1)
         {
             gameState = value == 1 ? GameState.X_Won : GameState.O_Won;
 
-            string result =
-                value == 1
-                ? "Player 1 Wins!"
-                : (GameManager.Instance.currentMode == GameMode.PlayerVsComputer
-                    ? "AI Wins!"
-                    : "Player 2 Wins!");
-
             ShowWinLine(winIndex);
             StartCoroutine(ShowResultAfterDelay(gameState));
-
-
             return;
         }
 
@@ -199,6 +178,7 @@ public class GameController : MonoBehaviour
             ShowStatusPanel(GameState.Draw);
         }
     }
+
     IEnumerator ShowResultAfterDelay(GameState state)
     {
         yield return new WaitForSeconds(strikeDuration);
@@ -214,9 +194,7 @@ public class GameController : MonoBehaviour
             StartPulse(player1Image);
         else
             StartPulse(player2Image);
-
     }
-
 
     void AIMove()
     {
@@ -225,7 +203,7 @@ public class GameController : MonoBehaviour
 
         int move = -1;
 
-        switch (aiDifficulty)
+        switch (GameManager.Instance.selectedDifficulty)
         {
             case AIDifficulty.Easy:
                 move = GetRandomMove();
@@ -253,29 +231,34 @@ public class GameController : MonoBehaviour
     int GetRandomMove()
     {
         List<int> empty = new List<int>();
-
         for (int i = 0; i < board.Length; i++)
             if (board[i] == 0)
                 empty.Add(i);
 
         return empty[Random.Range(0, empty.Count)];
     }
+
     int MediumMove()
     {
-        int move = FindBestMove(2);
+        if (Random.value < 0.6f)
+        {
+            int move = FindBestMove(2); 
 
-        if (move == -1)
-            move = FindBestMove(1); 
+            if (move == -1)
+                move = FindBestMove(1);
 
-        if (move == -1)
-            move = GetRandomMove();
+            if (move != -1)
+                return move;
+        }
 
-        return move;
+        return GetRandomMove();
     }
+
+
+
     int HardMove()
     {
         int move = FindBestMove(2);
-
         if (move == -1)
             move = FindBestMove(1);
 
@@ -300,7 +283,6 @@ public class GameController : MonoBehaviour
 
         return move;
     }
-
 
     int FindBestMove(int playerValue)
     {
