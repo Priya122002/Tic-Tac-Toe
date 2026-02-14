@@ -1,73 +1,64 @@
 fileFormatVersion: 2
-guid: 72a76dcc9d7991748824022af36602cf
+guid: 73d4c634858dc9649b67c98bf66ae827
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6003351534131484317
-    second: Rectangle 64 (2)_0
+      213: -1905684861663631648
+    second: Group 40_0
   - first:
-      213: 5683080132348361614
-    second: Rectangle 64 (2)_1
+      213: 3227412003546684430
+    second: Group 40_1
   - first:
-      213: 6789985485955566013
-    second: Rectangle 64 (2)_2
+      213: 2650078249276304487
+    second: Group 40_2
   - first:
-      213: 3879918087913105570
-    second: Rectangle 64 (2)_3
+      213: 6678400539017775795
+    second: Group 40_3
   - first:
-      213: -5203009169059699530
-    second: Rectangle 64 (2)_4
+      213: -792750049720612298
+    second: Group 40_4
   - first:
-      213: 4208221352518783574
-    second: Rectangle 64 (2)_5
+      213: 6976236901586669687
+    second: Group 40_5
   - first:
-      213: 1914968333129451575
-    second: Rectangle 64 (2)_6
+      213: 2094865339681093878
+    second: Group 40_6
   - first:
-      213: -6775467424392955112
-    second: Rectangle 64 (2)_7
+      213: 812904558987788508
+    second: Group 40_7
   - first:
-      213: 4574421108099257799
-    second: Rectangle 64 (2)_8
+      213: 1231114076454937972
+    second: Group 40_8
   - first:
-      213: -5199681648089175079
-    second: Rectangle 64 (2)_9
+      213: -4021995165922249321
+    second: Group 40_9
   - first:
-      213: 6568781245737383916
-    second: Rectangle 64 (2)_10
+      213: -2450421842793857701
+    second: Group 40_10
   - first:
-      213: 2814402387990906068
-    second: Rectangle 64 (2)_11
+      213: -8636670601255765444
+    second: Group 40_11
   - first:
-      213: 8967281191185957474
-    second: Rectangle 64 (2)_12
+      213: 1079171908983023623
+    second: Group 40_12
   - first:
-      213: -7257864060592524382
-    second: Rectangle 64 (2)_13
+      213: 4977304222616100304
+    second: Group 40_13
   - first:
-      213: -27371353346219352
-    second: Rectangle 64 (2)_14
+      213: -6559510145341825661
+    second: Group 40_14
   - first:
-      213: 5340261613521787223
-    second: Rectangle 64 (2)_15
+      213: -1335880878985420079
+    second: Group 40_15
   - first:
-      213: -8670322851692466553
-    second: Rectangle 64 (2)_16
+      213: 2356673696090217777
+    second: Group 40_16
   - first:
-      213: -2268456680348784914
-    second: Rectangle 64 (2)_17
+      213: -2864599719501769168
+    second: Group 40_17
   - first:
-      213: -2625813866860523605
-    second: Rectangle 64 (2)_18
-  - first:
-      213: -417426022155320611
-    second: Rectangle 64 (2)_19
-  - first:
-      213: -8120317104134938590
-    second: Rectangle 64 (2)_20
-  - first:
-      213: 3227006652837842934
-    second: Rectangle 64 (2)_21
+      213: -3284211351072240993
+    second: Group 40_18
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,7 +106,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 8, y: 8, z: 8, w: 8}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -176,485 +167,419 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rectangle 64 (2)_0
+      name: Group 40_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1952
-        height: 1320
+        width: 1128
+        height: 1051
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9614b5c960305350800000000000000
-      internalID: 6003351534131484317
+      spriteID: 0e623be07b5ad85e0800000000000000
+      internalID: -1905684861663631648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rectangle 64 (2)_1
+      name: Group 40_1
       rect:
         serializedVersion: 2
-        x: 1944
-        y: 1169
-        width: 8
-        height: 7
+        x: 414
+        y: 1041
+        width: 14
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8b34b6254b5ede40800000000000000
-      internalID: 5683080132348361614
+      spriteID: e0c5b3f1e121acc20800000000000000
+      internalID: 3227412003546684430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rectangle 64 (2)_2
+      name: Group 40_2
       rect:
         serializedVersion: 2
-        x: 1945
-        y: 1156
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db9807813dfda3e50800000000000000
-      internalID: 6789985485955566013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_3
-      rect:
-        serializedVersion: 2
-        x: 1947
-        y: 1150
-        width: 5
+        x: 444
+        y: 1045
+        width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a86cabb1fc38d530800000000000000
-      internalID: 3879918087913105570
+      spriteID: 76c6a138028f6c420800000000000000
+      internalID: 2650078249276304487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rectangle 64 (2)_4
+      name: Group 40_3
       rect:
         serializedVersion: 2
-        x: 1944
-        y: 985
-        width: 8
+        x: 455
+        y: 1040
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba8ee318e17eac50800000000000000
+      internalID: 6678400539017775795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_4
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1045
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63acabaa7069ff4f0800000000000000
+      internalID: -792750049720612298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_5
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1042
+        width: 10
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b4a81b3ab23bc7b0800000000000000
-      internalID: -5203009169059699530
+      spriteID: 7709b04108290d060800000000000000
+      internalID: 6976236901586669687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rectangle 64 (2)_5
+      name: Group 40_6
       rect:
         serializedVersion: 2
-        x: 1946
-        y: 965
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6529815260b966a30800000000000000
-      internalID: 4208221352518783574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_6
-      rect:
-        serializedVersion: 2
-        x: 1946
-        y: 900
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7388d449d85539a10800000000000000
-      internalID: 1914968333129451575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_7
-      rect:
-        serializedVersion: 2
-        x: 1947
-        y: 894
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 81bb3d58644b8f1a0800000000000000
-      internalID: -6775467424392955112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_8
-      rect:
-        serializedVersion: 2
-        x: 1944
-        y: 729
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c51e41f2cb9b7f30800000000000000
-      internalID: 4574421108099257799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_9
-      rect:
-        serializedVersion: 2
-        x: 1946
-        y: 709
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9dbe684171507d7b0800000000000000
-      internalID: -5199681648089175079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_10
-      rect:
-        serializedVersion: 2
-        x: 1946
-        y: 644
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce7bc677dbff82b50800000000000000
-      internalID: 6568781245737383916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_11
-      rect:
-        serializedVersion: 2
-        x: 1947
-        y: 638
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d4853f7f04ce0720800000000000000
-      internalID: 2814402387990906068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_12
-      rect:
-        serializedVersion: 2
-        x: 1944
-        y: 473
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2624ea19bbe227c70800000000000000
-      internalID: 8967281191185957474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_13
-      rect:
-        serializedVersion: 2
-        x: 1946
-        y: 453
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a3fe483713e64b90800000000000000
-      internalID: -7257864060592524382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_14
-      rect:
-        serializedVersion: 2
-        x: 1946
-        y: 388
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a2e6ce26e1ce9ff0800000000000000
-      internalID: -27371353346219352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_15
-      rect:
-        serializedVersion: 2
-        x: 1947
-        y: 382
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 759de91c4ab6c1a40800000000000000
-      internalID: 5340261613521787223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_16
-      rect:
-        serializedVersion: 2
-        x: 1944
-        y: 217
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78e2be0cd43dca780800000000000000
-      internalID: -8670322851692466553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_17
-      rect:
-        serializedVersion: 2
-        x: 1944
-        y: 145
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee6e2730ba2d480e0800000000000000
-      internalID: -2268456680348784914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_18
-      rect:
-        serializedVersion: 2
-        x: 1945
-        y: 132
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bafcb73433c3f8bd0800000000000000
-      internalID: -2625813866860523605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_19
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 0
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd28d659e31053af0800000000000000
-      internalID: -417426022155320611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_20
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 0
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2202288fd96de4f80800000000000000
-      internalID: -8120317104134938590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rectangle 64 (2)_21
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 0
+        x: 488
+        y: 1041
         width: 7
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ffc83e0471a8cc20800000000000000
-      internalID: 3227006652837842934
+      spriteID: 6f838f76de4721d10800000000000000
+      internalID: 2094865339681093878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 890
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd043c2b364084b00800000000000000
+      internalID: 812904558987788508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 881
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4756415dabbc51110800000000000000
+      internalID: 1231114076454937972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 869
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795bddeb4b00f28c0800000000000000
+      internalID: -4021995165922249321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5df96e115a5efdd0800000000000000
+      internalID: -2450421842793857701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 834
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a3712e8d1642880800000000000000
+      internalID: -8636670601255765444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 841
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 708638e222df9fe00800000000000000
+      internalID: 1079171908983023623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd9510d1dfe21540800000000000000
+      internalID: 4977304222616100304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 827
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d545ec640f7f4a0800000000000000
+      internalID: -6559510145341825661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_15
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 775
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d266d91b6ff57de0800000000000000
+      internalID: -1335880878985420079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_16
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 758
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13dd6fa8d3694b020800000000000000
+      internalID: 2356673696090217777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_17
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 733
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036d96f7bb5ee38d0800000000000000
+      internalID: -2864599719501769168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Group 40_18
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 694
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a880c3d232c62d0800000000000000
+      internalID: -3284211351072240993
       vertices: []
       indices: 
       edges: []
@@ -664,7 +589,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -673,28 +598,25 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rectangle 64 (2)_0: 6003351534131484317
-      Rectangle 64 (2)_1: 5683080132348361614
-      Rectangle 64 (2)_10: 6568781245737383916
-      Rectangle 64 (2)_11: 2814402387990906068
-      Rectangle 64 (2)_12: 8967281191185957474
-      Rectangle 64 (2)_13: -7257864060592524382
-      Rectangle 64 (2)_14: -27371353346219352
-      Rectangle 64 (2)_15: 5340261613521787223
-      Rectangle 64 (2)_16: -8670322851692466553
-      Rectangle 64 (2)_17: -2268456680348784914
-      Rectangle 64 (2)_18: -2625813866860523605
-      Rectangle 64 (2)_19: -417426022155320611
-      Rectangle 64 (2)_2: 6789985485955566013
-      Rectangle 64 (2)_20: -8120317104134938590
-      Rectangle 64 (2)_21: 3227006652837842934
-      Rectangle 64 (2)_3: 3879918087913105570
-      Rectangle 64 (2)_4: -5203009169059699530
-      Rectangle 64 (2)_5: 4208221352518783574
-      Rectangle 64 (2)_6: 1914968333129451575
-      Rectangle 64 (2)_7: -6775467424392955112
-      Rectangle 64 (2)_8: 4574421108099257799
-      Rectangle 64 (2)_9: -5199681648089175079
+      Group 40_0: -1905684861663631648
+      Group 40_1: 3227412003546684430
+      Group 40_10: -2450421842793857701
+      Group 40_11: -8636670601255765444
+      Group 40_12: 1079171908983023623
+      Group 40_13: 4977304222616100304
+      Group 40_14: -6559510145341825661
+      Group 40_15: -1335880878985420079
+      Group 40_16: 2356673696090217777
+      Group 40_17: -2864599719501769168
+      Group 40_18: -3284211351072240993
+      Group 40_2: 2650078249276304487
+      Group 40_3: 6678400539017775795
+      Group 40_4: -792750049720612298
+      Group 40_5: 6976236901586669687
+      Group 40_6: 2094865339681093878
+      Group 40_7: 812904558987788508
+      Group 40_8: 1231114076454937972
+      Group 40_9: -4021995165922249321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
